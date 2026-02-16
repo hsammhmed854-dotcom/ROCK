@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اسأل مهندس مساحة | أكاديمية الصخرة للمساحة</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.ask-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.ask-form {
+  background-color: white;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.ask-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.ask-form input,
+.ask-form textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.ask-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.ask-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.ask-form button:hover {
+  background-color: #1e40af;
+}
+
+.thank-you {
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  color: #16a34a;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="nav-left">
+    <img src="images/logo.png" class="logo" alt="Logo">
+    <div class="brand-name">
+      <h2>أكاديمية الصخرة للمساحة</h2>
+      <h4>The Rock For Survey</h4>
+    </div>
+  </div>
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="devices.html">الأجهزة</a></li>
+    <li><a href="software.html">البرامج</a></li>
+    <li><a href="books.html">الكتب والكورسات</a></li>
+    <li><a href="courses.html">الكورسات</a></li>
+    <li><a href="ask.html" class="active">اسأل مهندس مساحة</a></li>
+    <li><a href="contact.html">تواصل معنا</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>اسأل مهندس مساحة</h1>
+  <p>أرسل سؤالك وسيتم الرد عليك بسرعة وبشكل واضح</p>
+</section>
+
+<!-- Form -->
+<section class="ask-section">
+  <form id="questionForm" class="ask-form">
+    <label for="name">اسمك</label>
+    <input type="text" id="name" required>
+
+    <label for="question">سؤالك</label>
+    <textarea id="question" required></textarea>
+
+    <button type="submit">إرسال السؤال</button>
+  </form>
+</section>
+
+<div id="thankYou" class="thank-you">
+  شكراً لك! سيتم الرد على سؤالك قريباً.
+</div>
+
+<script>
+const form = document.getElementById("questionForm");
+const thankYou = document.getElementById("thankYou");
+
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+  form.style.display = "none";
+  thankYou.style.display = "block";
+
+  const name = document.getElementById("name").value;
+  const question = document.getElementById("question").value;
+  console.log("سؤال جديد:", name, question);
+});
+</script>
+
+<!-- Footer -->
+<footer>
+<p>© 2026 أكاديمية الصخرة للمساحة | The Rock For Survey</p>
+<p>
+تواصل معنا: 
+<a href="mailto:therockforsurvey@gmail.com" class="contact-link">الإيميل</a> | 
+<a href="https://wa.me/01157037132" target="_blank" class="contact-link">واتساب: 01157037132</a>
+</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>البرامج | أكاديمية الصخرة للمساحة</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  background-image: url("images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.15;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* ===== Grid البرامج ===== */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+/* ===== Box لكل برنامج ===== */
+.program-box {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  border-radius: 15px;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.program-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* ===== الصور ===== */
+.program-box img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.program-box:hover img {
+  transform: scale(1.05);
+}
+
+/* ===== العنوان والوصف ===== */
+.program-box h3 {
+  margin: 10px 0 8px;
+  font-size: 18px;
+}
+
+.program-box p {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+/* ===== الفيديو ===== */
+.program-box video {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ===== زر شاهد المزيد ===== */
+.more-videos {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #22c55e;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.more-videos:hover {
+  background-color: #16a34a;
+  transform: scale(1.05);
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="nav-left">
+    <img src="images/logo.png" class="logo" alt="Logo">
+    <div class="brand-name">
+      <h2>أكاديمية الصخرة للمساحة</h2>
+      <h4>The Rock For Survey</h4>
+    </div>
+  </div>
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="devices.html">الأجهزة</a></li>
+    <li><a href="software.html" class="active">البرامج</a></li>
+    <li><a href="books.html">الكتب</a></li>
+    <li><a href="courses.html">الكورسات</a></li>
+    <li><a href="ask.html">اسأل مهندس مساحة</a></li>
+    <li><a href="contact.html">تواصل معنا</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>البرامج الهندسية</h1>
+  <p>تعرف على أهم برامج المساحة والـ GIS مع فيديوهات تعليمية لكل برنامج</p>
+</section>
+
+<!-- برامج المساحة -->
+<section class="content content-grid">
+
+<!-- AutoCAD -->
+<div class="program-box">
+  <img src="images/autocad.png" alt="AutoCAD">
+  <h3>برنامج AutoCAD</h3>
+  <p>برنامج AutoCAD من أشهر برامج التصميم الهندسي، يُستخدم لرسم المخططات الهندسية الدقيقة، سواء للطرق أو المباني أو المشاريع المختلفة.</p>
+  <video controls>
+    <source src="videos/autocad.mp4" type="video/mp4">
+    متصفحك لا يدعم الفيديو.
+  </video>
+  <a href="autocad.html" class="more-videos">شاهد المزيد من الفيديوهات</a>
+</div>
+
+<!-- Civil 3D -->
+<div class="program-box">
+  <img src="images/civil.png" alt="Civil 3D">
+  <h3>برنامج Civil 3D</h3>
+  <p>برنامج Civil 3D لتصميم الطرق والبنية التحتية، يحتوي على أدوات هندسية قوية لإنشاء مشاريع معقدة بطريقة سهلة ودقيقة.</p>
+  <video controls>
+    <source src="videos/civil.mp4" type="video/mp4">
+    متصفحك لا يدعم الفيديو.
+  </video>
+  <a href="civil.html" class="more-videos">شاهد المزيد من الفيديوهات</a>
+</div>
+
+<!-- QGIS -->
+<div class="program-box">
+  <img src="images/qgis.png" alt="QGIS">
+  <h3>برنامج QGIS</h3>
+  <p>برنامج QGIS مفتوح المصدر لإنشاء الخرائط وتحليل البيانات الجغرافية، أداة ممتازة لكل مهندس مساحة للتعامل مع نظم المعلومات الجغرافية.</p>
+  <video controls>
+    <source src="videos/qgis.mp4" type="video/mp4">
+    متصفحك لا يدعم الفيديو.
+  </video>
+  <a href="qgis.html" class="more-videos">شاهد المزيد من الفيديوهات</a>
+</div>
+
+<!-- ArcMap -->
+<div class="program-box">
+  <img src="images/arcmap.png" alt="ArcMap">
+  <h3>برنامج ArcMap</h3>
+  <p>برنامج ArcMap من حزمة ArcGIS يُستخدم لإدارة وتحليل الخرائط والبيانات المكانية بشكل احترافي، أداة أساسية لمهندسي المساحة والمخططين.</p>
+  <video controls>
+    <source src="videos/arcmap.mp4" type="video/mp4">
+    متصفحك لا يدعم الفيديو.
+  </video>
+  <a href="arcmap.html" class="more-videos">شاهد المزيد من الفيديوهات</a>
+</div>
+
+<!-- ArcGIS Pro -->
+<div class="program-box">
+  <img src="images/arcgispro.png" alt="ArcGIS Pro">
+  <h3>برنامج ArcGIS Pro</h3>
+  <p>ArcGIS Pro هو البرنامج الحديث من Esri لإدارة وتحليل البيانات الجغرافية، يحتوي على أدوات تحليلية متقدمة لرسم الخرائط بدقة عالية.</p>
+  <video controls>
+    <source src="videos/arcgispro.mp4" type="video/mp4">
+    متصفحك لا يدعم الفيديو.
+  </video>
+  <a href="arcgispro.html" class="more-videos">شاهد المزيد من الفيديوهات</a>
+</div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+<p>© 2026 أكاديمية الصخرة للمساحة | The Rock For Survey</p>
+<p>
+تواصل معنا: 
+<a href="mailto:therockforsurvey@gmail.com" class="contact-link">الإيميل</a> | 
+<a href="https://wa.me/01157037132" target="_blank" class="contact-link">واتساب: 01157037132</a>
+</p>
+</footer>
+
+</body>
+</html>

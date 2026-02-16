@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تواصل معنا | أكاديمية الصخرة للمساحة</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ===== Body ===== */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f1f5f9;
+  color: #1e3a8a;
+  position: relative;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  text-align: center;
+  padding: 120px 20px 80px;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background-image: url("images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.08;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hero h1 { font-size: 42px; margin-bottom: 15px; font-weight: bold; }
+.hero h3 { font-size: 22px; margin-bottom: 20px; }
+.hero p { font-size: 16px; line-height: 1.6; margin-bottom: 30px; }
+
+/* ===== Contact Grid ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-box {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.contact-box:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.contact-box i {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.contact-box h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contact-box p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+/* ===== Navbar ===== */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #1e3a8a;
+  padding: 12px 25px;
+}
+
+nav .logo { width: 55px; border-radius: 8px; }
+nav h2,h4 { color:white; margin:0; line-height:1.2; }
+nav ul { list-style:none; display:flex; gap:18px; margin:0; padding:0; flex-wrap:wrap; }
+nav ul li a { color:white; font-weight:bold; }
+nav ul li a.active, nav ul li a:hover { color:#22c55e; }
+
+/* ===== Footer ===== */
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+.contact-link {
+  color: #22c55e;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-link:hover { text-decoration: underline; }
+
+/* ===== Floating Social Icons ===== */
+.social-icons {
+  position: fixed;
+  top: 40%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: #1e3a8a;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.social-icons a:hover {
+  background: #22c55e;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .contact-grid { grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); }
+  .hero h1 { font-size:32px; }
+  .hero h3 { font-size:18px; }
+  .hero p { font-size:14px; }
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="nav-left" style="display:flex; align-items:center; gap:10px;">
+    <img src="images/logo.png" class="logo" alt="Logo">
+    <div class="brand-name">
+      <h2>أكاديمية الصخرة للمساحة</h2>
+      <h4>The Rock For Survey</h4>
+    </div>
+  </div>
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="devices.html">الأجهزة</a></li>
+    <li><a href="software.html">البرامج</a></li>
+    <li><a href="books.html">الكتب</a></li>
+    <li><a href="courses.html">الكورسات</a></li>
+    <li><a href="contact.html" class="active">تواصل معنا</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>تواصل معنا</h1>
+  <h3>The Rock For Survey</h3>
+  <p>تابعنا على وسائل التواصل الاجتماعي أو راسلنا مباشرة للحصول على الدعم والشروحات</p>
+</section>
+
+<!-- Contact Grid -->
+<section class="contact-grid">
+
+  <div class="contact-box">
+    <i class="fab fa-facebook-f"></i>
+    <h3>فيسبوك</h3>
+    <p><a href="https://www.facebook.com/share/1CExRBMLkr/" target="_blank" class="contact-link">تابعنا على فيسبوك</a></p>
+  </div>
+
+  <div class="contact-box">
+    <i class="fab fa-instagram"></i>
+    <h3>انستجرام</h3>
+    <p><a href="https://www.instagram.com/the_rock_for_survey12?igsh=Z2k2bXFsOWl5bw==" target="_blank" class="contact-link">تابعنا على انستجرام</a></p>
+  </div>
+
+  <div class="contact-box">
+    <i class="fab fa-youtube"></i>
+    <h3>يوتيوب</h3>
+    <p><a href="https://youtube.com/@rocksurveyacademy?si=xrXP3Gv8oCE5UWue" target="_blank" class="contact-link">تابعنا على يوتيوب</a></p>
+  </div>
+
+  <div class="contact-box">
+    <i class="fab fa-tiktok"></i>
+    <h3>تيك توك</h3>
+    <p><a href="https://vm.tiktok.com/ZS9JvHY5LSaT4-HSSmJ/" target="_blank" class="contact-link">تابعنا على تيك توك</a></p>
+  </div>
+
+  <div class="contact-box">
+    <i class="fas fa-envelope"></i>
+    <h3>الإيميل</h3>
+    <p><a href="mailto:therockforsurvey@gmail.com" class="contact-link">تواصل معنا</a></p>
+  </div>
+
+  <div class="contact-box">
+    <i class="fab fa-whatsapp"></i>
+    <h3>واتساب</h3>
+    <p><a href="https://wa.me/01157037132" target="_blank" class="contact-link">01157037132</a></p>
+  </div>
+
+</section>
+
+<!-- Floating Social Icons -->
+<div class="social-icons">
+  <a href="https://www.facebook.com/share/1CExRBMLkr/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/the_rock_for_survey12?igsh=Z2k2bXFsOWl5bw==" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://youtube.com/@rocksurveyacademy?si=xrXP3Gv8oCE5UWue" target="_blank"><i class="fab fa-youtube"></i></a>
+  <a href="https://vm.tiktok.com/ZS9JvHY5LSaT4-HSSmJ/" target="_blank"><i class="fab fa-tiktok"></i></a>
+  <a href="mailto:therockforsurvey@gmail.com"><i class="fas fa-envelope"></i></a>
+  <a href="https://wa.me/01157037132" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<!-- Footer -->
+<footer>
+<p>© 2026 أكاديمية الصخرة للمساحة | The Rock For Survey</p>
+<p>
+تواصل معنا: 
+<a href="mailto:therockforsurvey@gmail.com" class="contact-link">تواصل معنا</a> | 
+<a href="https://wa.me/01157037132" target="_blank" class="contact-link">واتساب: 01157037132</a>
+</p>
+</footer>
+
+</body>
+</html>

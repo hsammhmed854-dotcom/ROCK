@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كتاب GPS | أكاديمية الصخرة للمساحة</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1e3a8a;
+  color: #f1f5f9;
+  position: relative;
+}
+
+/* اللوجو في الخلفية */
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: url('images/logo.png') no-repeat center/contain;
+  opacity: 0.1;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+header h1 {
+  color: #f1f5f9;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* الكتاب */
+.book-card {
+  max-width: 900px;
+  margin: 20px auto 50px;
+  background: #2563eb;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* الوصف */
+.desc {
+  background: #1e40af;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* PDF Viewer */
+iframe {
+  width: 100%;
+  height: 70vh;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* الأزرار */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn {
+  background: #22c55e;
+  padding: 12px 30px;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+/* عداد التحميل */
+.counter {
+  margin-top: 15px;
+  text-align: center;
+  color: #facc15;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #cbd5f1;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="nav-left">
+    <img src="images/logo.png" class="logo" alt="Logo">
+    <div class="brand-name">
+      <h2>أكاديمية الصخرة للمساحة</h2>
+      <h4>The Rock For Survey</h4>
+    </div>
+  </div>
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="devices.html">الأجهزة</a></li>
+    <li><a href="software.html">البرامج</a></li>
+    <li><a href="books.html" class="active">الكتب</a></li>
+    <li><a href="courses.html">الكورسات</a></li>
+    <li><a href="ask.html">اسأل مهندس مساحة</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>📘 كتاب GPS للمساحة</h1>
+</header>
+
+<div class="book-card">
+
+  <div class="desc">
+    هذا الكتاب يشرح أساسيات جهاز GPS للمساحة، بداية من التعرف على الجهاز ومكوناته، وطريقة الرصد وجمع البيانات، إلى معالجة الإحداثيات وتطبيقها في المشاريع الهندسية والمسطحية.  
+    الكتاب مفيد للطلاب والمهندسين المبتدئين والمهتمين بالميدان العملي للمساحة.
+  </div>
+
+  <iframe src="pdf/gps.pdf"></iframe>
+
+  <div class="actions">
+    <a class="btn" onclick="download()">⬇ تحميل الكتاب</a>
+    <a href="pdf/gps.pdf" class="btn" target="_blank">📖 اقرأ الكتاب</a>
+  </div>
+
+  <div class="counter" id="count"></div>
+
+</div>
+
+<footer>
+  © 2026 أكاديمية الصخرة للمساحة | The Rock For Survey
+</footer>
+
+<script>
+let key="gps";
+let num=localStorage.getItem(key)||0;
+const count=document.getElementById("count");
+count.innerHTML="عدد التحميلات: "+num;
+
+function download(){
+  num++;
+  localStorage.setItem(key,num);
+  count.innerHTML="عدد التحميلات: "+num;
+  location.href="pdf/gps.pdf";
+}
+</script>
+
+</body>
+</html>

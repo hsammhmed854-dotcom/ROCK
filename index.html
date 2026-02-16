@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أكاديمية الصخرة للمساحة | The Rock For Survey</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e3a8a;
+}
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  text-align: center;
+  padding: 120px 20px 80px;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background-image: url("images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.08;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hero h1 { font-size: 42px; margin-bottom: 15px; font-weight:bold; }
+.hero h3 { font-size: 22px; margin-bottom: 20px; }
+.hero p { font-size: 16px; line-height: 1.6; margin-bottom: 30px; }
+
+.btn-cta {
+  padding: 14px 30px;
+  background-color: #22c55e;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.btn-cta:hover { background-color: #16a34a; transform: scale(1.05); }
+
+/* ===== Section Title ===== */
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin: 50px 0 30px;
+}
+
+/* ===== Grid Preview ===== */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 0 20px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.box {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  border-radius: 12px;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+.box img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+  background-color: #f0f0f0;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.box h3 {
+  margin: 8px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.box p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #ffffff;
+  text-align: justify;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #1e3a8a;
+  padding: 12px 25px;
+}
+nav .logo { width: 50px; border-radius:8px; }
+nav h2,h4 { color:white; margin:0; line-height:1.2; }
+nav ul { list-style:none; display:flex; gap:15px; margin:0; padding:0; flex-wrap:wrap; }
+nav ul li a { color:white; font-weight:bold; }
+nav ul li a.active, nav ul li a:hover { color:#22c55e; }
+
+/* Footer */
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+.contact-link { color: #22c55e; font-weight:bold; text-decoration:none; }
+.contact-link:hover { text-decoration:underline; }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="nav-left" style="display:flex; align-items:center; gap:10px;">
+    <img src="images/logo.png" class="logo" alt="Logo">
+    <div class="brand-name">
+      <h2>أكاديمية الصخرة للمساحة</h2>
+      <h4>The Rock For Survey</h4>
+    </div>
+  </div>
+  <ul>
+    <li><a href="index.html" class="active">الرئيسية</a></li>
+    <li><a href="devices.html">الأجهزة</a></li>
+    <li><a href="software.html">البرامج</a></li>
+    <li><a href="books.html">الكتب</a></li>
+    <li><a href="courses.html">الكورسات</a></li>
+    <li><a href="ask.html">اسأل مهندس مساحة</a></li>
+    <li><a href="contact.html">تواصل معنا</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>أكاديمية الصخرة للمساحة</h1>
+  <h3>The Rock For Survey</h3>
+  <p>تعرف على أهم الأجهزة والبرامج المستخدمة في المساحة مع نبذة وفيديوهات تعليمية لكل جهاز أو برنامج.</p>
+  <a href="courses.html" class="btn-cta">ابدأ التعلم الآن</a>
+</section>
+
+<!-- محتويات المنصة -->
+<h2 class="section-title">محتويات المنصة</h2>
+
+<section class="content content-grid">
+
+<!-- الأجهزة -->
+<div class="box">
+  <img src="images/gps.png" alt="GPS">
+  <h3>جهاز GPS</h3>
+  <p>جهاز GPS أداة أساسية لكل مهندس مساحة، يتيح معرفة الإحداثيات بدقة عالية في المشاريع الهندسية والمساحية.</p>
+</div>
+
+<div class="box">
+  <img src="images/totalstation.png" alt="Total Station">
+  <h3>جهاز Total Station</h3>
+  <p>جهاز متقدم لقياس الزوايا والمسافات بدقة عالية، مثالي للأعمال الهندسية والمساحية لضمان النتائج الدقيقة.</p>
+</div>
+
+<div class="box">
+  <img src="images/level.png" alt="Level">
+  <h3>الميزان</h3>
+  <p>الميزان لضبط المستويات والمنسوب بدقة عالية في المشاريع الصغيرة والكبيرة.</p>
+</div>
+
+<!-- البرامج -->
+<div class="box">
+  <img src="images/arcmap.png" alt="ArcMap">
+  <h3>ArcMap</h3>
+  <p>برنامج لإنشاء الخرائط وتحليل البيانات الجغرافية بدقة عالية مع أدوات متقدمة للتخطيط المساحي.</p>
+</div>
+
+<div class="box">
+  <img src="images/arcgispro.png" alt="ArcGIS Pro">
+  <h3>ArcGIS Pro</h3>
+  <p>نسخة حديثة من ArcGIS توفر إمكانيات التحليل المكاني ثلاثي الأبعاد وإدارة المشاريع المساحية بسهولة.</p>
+</div>
+
+<div class="box">
+  <img src="images/civil.png" alt="Civil 3D">
+  <h3>Civil 3D</h3>
+  <p>برنامج تصميم الطرق والبنية التحتية مع أدوات قوية لتخطيط المشاريع الهندسية وتحليل البيانات المكانية.</p>
+</div>
+
+<div class="box">
+  <img src="images/autocad.png" alt="AutoCAD">
+  <h3>AutoCAD</h3>
+  <p>برنامج الرسم الهندسي الأشهر مع أدوات للرسم ثنائي وثلاثي الأبعاد، مناسب لجميع أعمال التصميم والمسح.</p>
+</div>
+
+<div class="box">
+  <img src="images/qgis.png" alt="QGIS">
+  <h3>QGIS</h3>
+  <p>برنامج نظم المعلومات الجغرافية مفتوح المصدر، مع شروحات عملية للخرائط والتحليل المكاني وإدارة البيانات المساحية.</p>
+</div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+<p>© 2026 أكاديمية الصخرة للمساحة | The Rock For Survey</p>
+<p>
+تواصل معنا: 
+<a href="mailto:therockforsurvey@gmail.com" class="contact-link">الإيميل</a> | 
+<a href="https://wa.me/01157037132" target="_blank" class="contact-link">واتساب: 01157037132</a>
+</p>
+</footer>
+
+</body>
+</html>

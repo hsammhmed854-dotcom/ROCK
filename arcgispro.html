@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كورس ArcGIS Pro - أكاديمية الصخرة للمساحة</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+body { margin:0; font-family: Arial,sans-serif; background-color:#f0f4f8; direction:rtl; }
+nav { display:flex; align-items:center; justify-content:space-between; background-color:#1e3a8a; padding:15px 30px; flex-wrap:wrap; }
+nav .logo { width:60px; border-radius:8px; }
+nav h2 { color:white; font-size:18px; margin:10px; }
+nav ul { list-style:none; display:flex; gap:18px; padding:0; margin:0; }
+nav ul li a { color:white; font-weight:bold; }
+nav ul li a.active, nav ul li a:hover { color:#22c55e; }
+.course-header { background:linear-gradient(135deg,#1e3a8a,#2563eb); color:white; text-align:center; padding:60px 20px; border-radius:0 0 40px 40px; }
+.course-header h1 { font-size:32px; margin-bottom:10px; }
+.course-header p { font-size:18px; opacity:0.9; }
+.video-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:25px; padding:40px; background-color:#e0f7fa; border-radius:20px; }
+.video-card { background:white; border-radius:20px; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,0.15); transition:transform 0.3s, box-shadow 0.3s; }
+.video-card:hover { transform:translateY(-5px) scale(1.02); box-shadow:0 15px 35px rgba(0,0,0,0.25); }
+.video-card iframe { width:100%; height:200px; }
+.video-card h3 { text-align:center; padding:10px; color:#1e3a8a; font-size:16px; }
+.video-card p { text-align:center; padding:0 10px 10px 10px; font-size:14px; color:#555; }
+footer { background-color:#1e3a8a; color:white; text-align:center; padding:20px; }
+.contact-link { color:#22c55e; font-weight:bold; }
+</style>
+</head>
+<body>
+
+<nav>
+<img src="images/logo.png" class="logo" alt="Logo">
+<h2>أكاديمية الصخرة للمساحة | The Rock For Survey</h2>
+<ul>
+<li><a href="index.html">الرئيسية</a></li>
+<li><a href="devices.html">الأجهزة</a></li>
+<li><a href="software.html">البرامج</a></li>
+<li><a href="books.html">الكتب</a></li>
+<li><a href="courses.html" class="active">الكورسات</a></li>
+<li><a href="ask.html">اسأل مهندس مساحة</a></li>
+</ul>
+</nav>
+
+<section class="course-header">
+<h1>كورس ArcGIS Pro</h1>
+<p>سلسلة فيديوهات لتعلم نظم المعلومات الجغرافية باستخدام ArcGIS Pro.</p>
+</section>
+
+<section class="content video-grid">
+
+<div class="video-card">
+  <iframe src="https://www.youtube.com/embed/example1" title="ArcGIS Pro فيديو 1" frameborder="0" allowfullscreen></iframe>
+  <h3>ArcGIS Pro فيديو 1</h3>
+  <p>مقدمة للبرنامج وواجهة المستخدم</p>
+</div>
+
+<div class="video-card">
+  <iframe src="https://www.youtube.com/embed/example2" title="ArcGIS Pro فيديو 2" frameborder="0" allowfullscreen></iframe>
+  <h3>ArcGIS Pro فيديو 2</h3>
+  <p>إنشاء الخرائط وتحليل البيانات الجغرافية</p>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 أكاديمية الصخرة للمساحة | The Rock For Survey</p>
+<p>
+تواصل معنا: 
+<a href="mailto:therockforsurvey@gmail.com" class="contact-link">الإيميل</a> | 
+<a href="https://wa.me/01157037132" target="_blank" class="contact-link">واتساب: 01157037132</a>
+</p>
+</footer>
+
+</body>
+</html>

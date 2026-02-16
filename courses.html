@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الكورسات | أكاديمية الصخرة للمساحة</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+body {
+  margin:0;
+  font-family: Arial,sans-serif;
+  background-color:#f0f4f8;
+  direction:rtl;
+}
+
+/* ===== Navbar ===== */
+nav {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  background-color:#1e3a8a;
+  padding:15px 30px;
+}
+nav .logo { width:60px; border-radius:8px; }
+nav h2 { color:white; font-size:18px; margin:10px; }
+nav ul { list-style:none; display:flex; gap:18px; padding:0; margin:0; }
+nav ul li a { color:white; font-weight:bold; }
+nav ul li a.active, nav ul li a:hover { color:#22c55e; }
+
+/* ===== Hero Section ===== */
+.hero {
+  background: linear-gradient(135deg,#1e3a8a,#2563eb);
+  color:white;
+  text-align:center;
+  padding:70px 20px;
+  border-radius:0 0 40px 40px;
+}
+.hero h1 { font-size:32px; margin-bottom:10px; }
+.hero p { font-size:18px; opacity:0.9; }
+
+/* ===== Courses Grid ===== */
+.course-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  padding:40px;
+}
+
+/* ===== Course Card ===== */
+.course-card {
+  position:relative;
+  overflow:hidden;
+  border-radius:20px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.2);
+  transition:transform 0.3s, box-shadow 0.3s;
+  cursor:pointer;
+  text-decoration:none;
+  color:white;
+}
+.course-card img {
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  transition: transform 0.3s;
+}
+.course-card:hover {
+  transform:translateY(-8px) scale(1.03);
+  box-shadow:0 20px 40px rgba(0,0,0,0.35);
+}
+.course-card:hover img { transform:scale(1.1); }
+
+/* ===== Overlay Text ===== */
+.course-card h3 {
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  background-color:rgba(0,0,0,0.6);
+  padding:10px 15px;
+  border-radius:10px;
+  font-size:18px;
+  font-weight:bold;
+}
+.course-card p {
+  position:absolute;
+  bottom:50px;
+  left:10px;
+  background-color:rgba(0,0,0,0.4);
+  padding:8px 12px;
+  border-radius:8px;
+  font-size:14px;
+  max-width:90%;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color:#1e3a8a;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+.contact-link { color:#22c55e; font-weight:bold; }
+</style>
+</head>
+<body>
+
+<nav>
+<img src="images/logo.png" class="logo" alt="Logo">
+<h2>أكاديمية الصخرة للمساحة | The Rock For Survey</h2>
+<ul>
+<li><a href="index.html">الرئيسية</a></li>
+<li><a href="devices.html">الأجهزة</a></li>
+<li><a href="software.html">البرامج</a></li>
+<li><a href="books.html">الكتب والكورسات</a></li>
+<li><a href="courses.html" class="active">الكورسات</a></li>
+<li><a href="ask.html">اسأل مهندس مساحة</a></li>
+<li><a href="contact.html">تواصل معنا</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h1>الكورسات الهندسية</h1>
+<p>اختر الكورس وابدأ التعلم مباشرة من سلسلة الفيديوهات</p>
+</section>
+
+<section class="course-grid">
+
+<!-- GPS -->
+<a href="gps.html" class="course-card">
+<img src="images/gps.png" alt="GPS">
+<h3>كورس GPS</h3>
+<p>سلسلة فيديوهات تعليمية لاستخدام GPS في المساحة العملية</p>
+</a>
+
+<!-- الميزان -->
+<a href="level.html" class="course-card">
+<img src="images/level.png" alt="Level">
+<h3>كورس الميزان</h3>
+<p>تعلم ضبط الارتفاعات والمناسيب بدقة عالية</p>
+</a>
+
+<!-- Total Station -->
+<a href="totalstation.html" class="course-card">
+<img src="images/totalstation.png" alt="Total Station">
+<h3>كورس Total Station</h3>
+<p>تعلم القياسات الدقيقة باستخدام Total Station في المشاريع</p>
+</a>
+
+<!-- ArcMap -->
+<a href="arcmap.html" class="course-card">
+<img src="images/arcmap.png" alt="ArcMap">
+<h3>كورس ArcMap</h3>
+<p>تعلم إنشاء الخرائط وتحليل البيانات الجغرافية GIS</p>
+</a>
+
+<!-- ArcGIS Pro -->
+<a href="arcgispro.html" class="course-card">
+<img src="images/arcgispro.png" alt="ArcGIS Pro">
+<h3>كورس ArcGIS Pro</h3>
+<p>سلسلة فيديوهات متقدمة لتحليل الخرائط والبيانات المكانية</p>
+</a>
+
+<!-- Civil 3D -->
+<a href="civil.html" class="course-card">
+<img src="images/civil.png" alt="Civil 3D">
+<h3>كورس Civil 3D</h3>
+<p>تعلم تصميم الطرق والشبكات والبنية التحتية باحترافية</p>
+</a>
+
+<!-- AutoCAD -->
+<a href="autocad.html" class="course-card">
+<img src="images/autocad.png" alt="AutoCAD">
+<h3>كورس AutoCAD</h3>
+<p>تعلم الرسم الهندسي ثنائي وثلاثي الأبعاد بشكل احترافي</p>
+</a>
+
+<!-- QGIS -->
+<a href="qgis.html" class="course-card">
+<img src="images/qgis.png" alt="QGIS">
+<h3>كورس QGIS</h3>
+<p>تعلم نظم المعلومات الجغرافية والتحليل المكاني</p>
+</a>
+
+</section>
+
+<footer>
+<p>© 2026 أكاديمية الصخرة للمساحة | The Rock For Survey</p>
+<p>
+تواصل معنا: 
+<a href="mailto:therockforsurvey@gmail.com" class="contact-link">الإيميل</a> | 
+<a href="https://wa.me/01157037132" target="_blank" class="contact-link">واتساب: 01157037132</a>
+</p>
+</footer>
+
+</body>
+</html>

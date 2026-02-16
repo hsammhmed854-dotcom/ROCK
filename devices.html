@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أجهزة المساحة | أكاديمية الصخرة للمساحة</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  background-image: url("images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.15;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* عشان ما يقطعش النص */
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* ===== Grid الأجهزة ===== */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+/* ===== Box لكل جهاز ===== */
+.device-box {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  border-radius: 15px;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.device-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* ===== الصور ===== */
+.device-box img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.device-box:hover img {
+  transform: scale(1.05);
+}
+
+/* ===== العنوان والوصف ===== */
+.device-box h3 {
+  margin: 10px 0 8px;
+  font-size: 18px;
+}
+
+.device-box p {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+/* ===== الفيديو ===== */
+.device-box video {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ===== زر شاهد المزيد ===== */
+.more-videos {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #22c55e;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.more-videos:hover {
+  background-color: #16a34a;
+  transform: scale(1.05);
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="nav-left">
+    <img src="images/logo.png" class="logo" alt="Logo">
+    <div class="brand-name">
+      <h2>أكاديمية الصخرة للمساحة</h2>
+      <h4>The Rock For Survey</h4>
+    </div>
+  </div>
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="devices.html" class="active">الأجهزة</a></li>
+    <li><a href="software.html">البرامج</a></li>
+    <li><a href="books.html">الكتب</a></li>
+    <li><a href="courses.html">الكورسات</a></li>
+    <li><a href="ask.html">اسأل مهندس مساحة</a></li>
+    <li><a href="contact.html">تواصل معنا</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>أجهزة المساحة</h1>
+  <p>تعرف على أهم أجهزة المساحة مع فيديوهات تعليمية لكل جهاز</p>
+</section>
+
+<!-- أجهزة المساحة -->
+<section class="content content-grid">
+
+<!-- GPS -->
+<div class="device-box">
+  <img src="images/gps.png" alt="GPS">
+  <h3>جهاز GPS</h3>
+  <p>جهاز تحديد المواقع GPS أداة أساسية لكل مهندس مساحة، يتيح لك معرفة الإحداثيات بدقة كبيرة ويستخدم في المشاريع الهندسية والمسطحية لضمان القياسات الصحيحة وسهولة التخطيط.</p>
+  <video controls>
+    <source src="videos/gps.mp4" type="video/mp4">
+    متصفحك لا يدعم الفيديو.
+  </video>
+  <a href="gps.html" class="more-videos">شاهد المزيد من الفيديوهات</a>
+</div>
+
+<!-- Total Station -->
+<div class="device-box">
+  <img src="images/totalstation.png" alt="Total Station">
+  <h3>جهاز Total Station</h3>
+  <p>جهاز Total Station أداة متقدمة لقياس الزوايا والمسافات بدقة عالية، مثالي للأعمال الهندسية والمساحية لضمان النتائج الدقيقة وتسهيل عمليات المسح الميداني.</p>
+  <video controls>
+    <source src="videos/totalstation.mp4" type="video/mp4">
+    متصفحك لا يدعم الفيديو.
+  </video>
+  <a href="totalstation.html" class="more-videos">شاهد المزيد من الفيديوهات</a>
+</div>
+
+<!-- الميزان -->
+<div class="device-box">
+  <img src="images/level.png" alt="Level">
+  <h3>الميزان</h3>
+  <p>الميزان جهاز يستخدم لضبط المستويات والمنسوب بدقة عالية، ويضمن تنفيذ الأعمال بشكل صحيح سواء في مشاريع البناء الصغيرة أو الكبيرة.</p>
+  <video controls>
+    <source src="videos/level.mp4" type="video/mp4">
+    متصفحك لا يدعم الفيديو.
+  </video>
+  <a href="level.html" class="more-videos">شاهد المزيد من الفيديوهات</a>
+</div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+<p>© 2026 أكاديمية الصخرة للمساحة | The Rock For Survey</p>
+<p>
+تواصل معنا: 
+<a href="mailto:therockforsurvey@gmail.com" class="contact-link">الإيميل</a> | 
+<a href="https://wa.me/01157037132" target="_blank" class="contact-link">واتساب: 01157037132</a>
+</p>
+</footer>
+
+</body>
+</html>

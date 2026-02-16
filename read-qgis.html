@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كتاب QGIS | أكاديمية الصخرة للمساحة</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1e3a8a;
+  color: #f1f5f9;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: url('images/logo.png') no-repeat center/contain;
+  opacity: 0.1;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #1e3a8a;
+  padding: 15px 30px;
+}
+
+nav .logo { width: 55px; border-radius: 8px; }
+nav h2,h4 { color:white; margin:0; }
+nav ul { list-style:none; display:flex; gap:18px; margin:0; padding:0; }
+nav ul li a { color:white; font-weight:bold; }
+nav ul li a.active, nav ul li a:hover { color:#22c55e; }
+
+header { text-align:center; padding:40px 20px 20px; }
+header h1 { font-size:32px; margin-bottom:10px; }
+
+.book-card {
+  max-width: 900px;
+  margin: 20px auto 50px;
+  background: #2563eb;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.desc {
+  background: #1e40af;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+iframe {
+  width: 100%;
+  height: 70vh;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn {
+  background: #22c55e;
+  padding: 12px 30px;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover { background: #16a34a; transform: scale(1.05); }
+
+.counter { margin-top:15px; text-align:center; color:#facc15; font-weight:bold; font-size:16px; }
+
+footer { text-align:center; padding:20px; color:#cbd5f1; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-left">
+    <img src="images/logo.png" class="logo" alt="Logo">
+    <div class="brand-name">
+      <h2>أكاديمية الصخرة للمساحة</h2>
+      <h4>The Rock For Survey</h4>
+    </div>
+  </div>
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="devices.html">الأجهزة</a></li>
+    <li><a href="software.html">البرامج</a></li>
+    <li><a href="books.html" class="active">الكتب</a></li>
+    <li><a href="courses.html">الكورسات</a></li>
+    <li><a href="ask.html">اسأل مهندس مساحة</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>📘 كتاب QGIS</h1>
+</header>
+
+<div class="book-card">
+  <div class="desc">
+    هذا الكتاب يقدّم شرحًا شاملًا لبرنامج QGIS، نظام المعلومات الجغرافية مفتوح المصدر، ويغطي كيفية إدارة الخرائط، تحليل البيانات المكانية، تصميم الخرائط، واستخدام الأدوات المختلفة لإجراء التحليل الجغرافي بشكل عملي ودقيق.
+  </div>
+  <iframe src="pdf/qgis.pdf"></iframe>
+  <div class="actions">
+    <a class="btn" onclick="download('qgis')">⬇ تحميل الكتاب</a>
+    <a href="pdf/qgis.pdf" class="btn" target="_blank">📖 اقرأ الكتاب</a>
+  </div>
+  <div class="counter" id="count-qgis"></div>
+</div>
+
+<footer>
+  © 2026 أكاديمية الصخرة للمساحة | The Rock For Survey
+</footer>
+
+<script>
+function download(key){
+  const num = Number(localStorage.getItem(key) || 0) + 1;
+  localStorage.setItem(key,num);
+  document.getElementById("count-"+key).innerHTML = "عدد التحميلات: "+num;
+  location.href="pdf/"+key+".pdf";
+}
+
+window.onload = ()=>{
+  const num = Number(localStorage.getItem("qgis")||0);
+  document.getElementById("count-qgis").innerHTML = "عدد التحميلات: "+num;
+};
+</script>
+
+</body>
+</html>

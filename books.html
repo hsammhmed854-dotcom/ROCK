@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الكتب | أكاديمية الصخرة للمساحة</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 { font-size: 36px; margin-bottom: 10px; }
+.hero p { font-size: 16px; opacity: 0.9; }
+
+/* ===== Grid الكتب ===== */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+/* ===== Box لكل كتاب ===== */
+.book-box {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  border-radius: 15px;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+.book-box img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.book-box h3 {
+  margin: 10px 0 8px;
+  font-size: 18px;
+}
+
+.book-box a.read-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #22c55e;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.book-box a.read-btn:hover {
+  background-color: #16a34a;
+  transform: scale(1.05);
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="nav-left">
+    <img src="images/logo.png" class="logo" alt="Logo">
+    <div class="brand-name">
+      <h2>أكاديمية الصخرة للمساحة</h2>
+      <h4>The Rock For Survey</h4>
+    </div>
+  </div>
+  <ul>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="devices.html">الأجهزة</a></li>
+    <li><a href="software.html">البرامج</a></li>
+    <li><a href="books.html" class="active">الكتب</a></li>
+    <li><a href="courses.html">الكورسات</a></li>
+    <li><a href="ask.html">اسأل مهندس مساحة</a></li>
+    <li><a href="contact.html">تواصل معنا</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>الكتب</h1>
+  <p>كل كتاب يمثل جهاز أو برنامج مع إمكانية القراءة والتحميل مباشرة</p>
+</section>
+
+<!-- كتب الأجهزة والبرامج -->
+<section class="content content-grid">
+
+<!-- GPS -->
+<div class="book-box">
+  <img src="images/gps.png" alt="كتاب GPS">
+  <h3>كتاب جهاز GPS</h3>
+  <a href="read-gps.html" class="read-btn">اقرأ الكتاب</a>
+</div>
+
+<!-- Total Station -->
+<div class="book-box">
+  <img src="images/totalstation.png" alt="كتاب Total Station">
+  <h3>كتاب Total Station</h3>
+  <a href="read-totalstation.html" class="read-btn">اقرأ الكتاب</a>
+</div>
+
+<!-- الميزان -->
+<div class="book-box">
+  <img src="images/level.png" alt="كتاب الميزان">
+  <h3>كتاب الميزان</h3>
+  <a href="read-level.html" class="read-btn">اقرأ الكتاب</a>
+</div>
+
+<!-- ArcMap -->
+<div class="book-box">
+  <img src="images/arcmap.png" alt="كتاب ArcMap">
+  <h3>كتاب ArcMap</h3>
+  <a href="read-arcmap.html" class="read-btn">اقرأ الكتاب</a>
+</div>
+
+<!-- ArcGIS Pro -->
+<div class="book-box">
+  <img src="images/arcgispro.png" alt="كتاب ArcGIS Pro">
+  <h3>كتاب ArcGIS Pro</h3>
+  <a href="read-arcgispro.html" class="read-btn">اقرأ الكتاب</a>
+</div>
+
+<!-- Civil 3D -->
+<div class="book-box">
+  <img src="images/civil.png" alt="كتاب Civil 3D">
+  <h3>كتاب Civil 3D</h3>
+  <a href="read-civil.html" class="read-btn">اقرأ الكتاب</a>
+</div>
+
+<!-- AutoCAD -->
+<div class="book-box">
+  <img src="images/autocad.png" alt="كتاب AutoCAD">
+  <h3>كتاب AutoCAD</h3>
+  <a href="read-autocad.html" class="read-btn">اقرأ الكتاب</a>
+</div>
+
+<!-- QGIS -->
+<div class="book-box">
+  <img src="images/qgis.png" alt="كتاب QGIS">
+  <h3>كتاب QGIS</h3>
+  <a href="read-qgis.html" class="read-btn">اقرأ الكتاب</a>
+</div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+<p>© 2026 أكاديمية الصخرة للمساحة | The Rock For Survey</p>
+<p>
+تواصل معنا: 
+<a href="mailto:therockforsurvey@gmail.com" class="contact-link">الإيميل</a> | 
+<a href="https://wa.me/01157037132" target="_blank" class="contact-link">واتساب: 01157037132</a>
+</p>
+</footer>
+
+</body>
+</html>
